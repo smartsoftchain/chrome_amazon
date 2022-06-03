@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="content-script-Type" content="text/javascript">
+<title>{val admin/title}</title>
+<link rel="stylesheet" type="text/css" href="admin.css" media="all">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.del').click(function() {
+        if(confirm("このキーを削除します。よろしいですか？")){
+        	var id = $(this).attr("id");
+			$.post(
+				"index.php?act=key_del",
+				{ id: id})
+				.done(function(res) {
+					alert("削除しました。");
+					location.href="./?act=key_list";
+			});
+	    }else{
+	        return false;  
+	    }
+    });
+});
+</script>
+
+</head>
+<body>
+
+
+<div id="layout">
+
+
+
+<div id="layout">
+
+{include header.tpl}
+
+<div id="main" class="clearfix">
+
+<div class="info">{val osirase}<!--{def limit_date}-->{include limit.tpl}<!--{/def}--></div>
+<p class="submenu"></p>
+<div class="cts">
+<h2>登録APIキー一覧</h2>
+
+<div class="box">
+<p></p>
+
+<div class="cts">
+
+
+
+<table class="tb02" border="0" cellpadding="1" cellspacing="1">
+    <tr>
+        <th>NO</th>
+        <th>登録タイプ</th>
+        <th>APIキー</th>
+        <th>シークレット or<br />楽天アフィキーor<br />Yahoo sid.pid</th>
+        <th>エラー回数</th>
+        <th>アクション</th>
+    </tr>
+    <!--{each list}-->
+    <tr>
+        <td align="center">{val list/id}</td>
+        <td>{val list/type}</td>
+        <td>{val list/key}</td>
+        <td>{val list/secret}</td>
+        <td>{val list/error}</td>
+        <td><a href="./?act=key_update&id={val list/id}">編集</a>　<a href="javascript:void(0);" id="{val list/id}" class="del">削除</a></td>
+</tr>
+    <!--{/each}-->
+</table>
+</div>
+<div class="btn_area">{val pagingstring}</div>
+<br>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+<div id="foot">
+</div>
+
+
+</div>
+
+</body></html>

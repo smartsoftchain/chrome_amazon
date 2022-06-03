@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="content-script-Type" content="text/javascript">
+<title>{val admin/title}</title>
+<link rel="stylesheet" type="text/css" href="admin.css" media="all">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#send').click(function() {
+        if(confirm("この情報で登録します。よろしいですか？")){
+	        $('#form1').submit();
+	    }else{
+	        return false;  
+	    }
+    });
+    $('#send2').click(function() {
+        if(confirm("この情報で登録します。よろしいですか？")){
+	        $('#form2').submit();
+	    }else{
+	        return false;  
+	    }
+    });
+    $('#send3').click(function() {
+        if(confirm("この情報で登録します。よろしいですか？")){
+	        $('#form3').submit();
+	    }else{
+	        return false;  
+	    }
+    });
+});
+</script>
+</head>
+<body>
+
+<div id="layout">
+
+{include header.tpl}
+
+<div id="main" class="clearfix">
+
+<h2>各種APIキー登録</h2>
+
+<div class="box">
+<div class="cts">
+<!--{def error}-->
+{val error}
+<!--{/def}-->
+<!--{def message}-->
+<p><span class="error">{val message}</span></p>
+<!--{/def}-->
+<h3>楽天キー登録</h3>
+<form name="form1" id="form1" method="post" action="./?act=key_regist">
+<input type="hidden" name="mode" value="new">
+<input type="hidden" name="type" value="0">
+<table width="100%" class="tb01">
+	<tbody>
+	<tr>
+		<th>APIキー</th>
+		<td><input name="key" value="{val form/key}" size="40" id="key" type="text" class="txtbox"></td>
+	</tr>
+	<tr>
+		<th>アフィリエイトキー</th>
+		<td><input name="aid" id="aid" size="40" type="text" class="txtbox" value="{val aid}"></td>
+	</tr>
+</tbody></table>
+<div class="btn_area01"><input id="send" value=" 登 録 " name="button" type="button" class="btn01"></div>
+</form>
+<br />
+
+<h3>Yahooキー登録</h3>
+<form name="form1" id="form2" method="post" action="./?act=key_regist">
+<input type="hidden" name="mode" value="new">
+<input type="hidden" name="type" value="1">
+<table width="100%" class="tb01">
+	<tbody>
+	<tr>
+		<th>APIキー</th>
+		<td><input name="key" value="{val form/key}" size="40" id="key" type="text" class="txtbox"></td>
+	</tr>
+	<tr>
+		<th>SID</th>
+		<td><input name="sid" id="sid" size="40" type="text" class="txtbox" value="{val sid}"></td>
+	</tr>
+	<tr>
+		<th>PID</th>
+		<td><input name="pid" id="sid" size="40" type="text" class="txtbox" value="{val pid}"></td>
+	</tr>
+</tbody></table>
+<div class="btn_area01"><input id="send2" value=" 登 録 " name="button" type="button" class="btn01"></div>
+</form>
+<br />
+
+<h3>Amazonキー登録</h3>
+<form name="form1" id="form3" method="post" action="./?act=key_regist">
+<input type="hidden" name="mode" value="new">
+<input type="hidden" name="type" value="2">
+<table width="100%" class="tb01">
+	<tbody>
+	<tr>
+		<th>APIキー</th>
+		<td><input name="key" value="{val form/key}" size="40" id="key" type="text" class="txtbox"></td>
+	</tr>
+	<tr>
+		<th>シークレットキー</th>
+		<td><input name="secret" value="{val form/secret}" id="secret" size="40" type="text" class="txtbox"></td>
+	</tr>
+</tbody></table>
+<div class="btn_area01"><input id="send3" value=" 登 録 " name="button" type="button" class="btn01"></div>
+</form>
+<br />
+
+<!--中身-->
+</form>
+</div><!-- /cts -->
+</div><!-- /box -->
+</div><!-- /main -->
+
+{include footer.tpl}
+
+</div><!-- /layout -->
+
+</body></html>

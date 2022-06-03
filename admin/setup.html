@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="content-script-Type" content="text/javascript">
+<title>{val admin/title}</title>
+<link rel="stylesheet" type="text/css" href="admin.css" media="all">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    $("#send").click(function() {
+    	var login_id = $("#login_id").val();
+    	var login_pw = $("#login_pw").val();
+    	if(login_id == ''){
+    		alert("ログインメールアドレスが入力されていません。");
+    		return false;
+    	} else if(login_pw == ''){
+    		alert("ログインパスワードが入力されていません。");
+    		return false;
+        }
+    	$('#form1').submit();
+
+    });
+});
+</script>
+
+
+
+</head>
+<body>
+
+<div id="layout">
+
+{include header.tpl}
+
+<div id="main" class="clearfix">
+
+<h2>ログイン情報更新</h2>
+
+<div class="box">
+<div class="cts">
+<!--{def error}-->
+{val error}
+<!--{/def}-->
+<form name="form1" id="form1" method="post" action="./?act=setup">
+<input type="hidden" name="mode" value="update">
+<table width="100%" class="tb01">
+	<tbody>
+
+	<tr>
+		<th>ログインメールアドレス</th>
+		<td><input id="login_id" name="login_id" value="{val form/login_id}" size="40" type="text" class="txtbox"></td>
+	</tr>
+	<tr>
+		<th>ログインパスワード</th>
+		<td><input id="login_pw" name="login_pw" value="{val form/login_pw}" size="40" type="text" class="txtbox"></td>
+	</tr>
+
+    
+</tbody></table>
+<div class="btn_area01"><input id="send" value=" 更　新 " name="edit" type="button" class="btn01"></div>
+<!--中身-->
+</form>
+</div><!-- /cts -->
+</div><!-- /box -->
+</div><!-- /main -->
+
+{include footer.tpl}
+
+</div><!-- /layout -->
+
+</body></html>

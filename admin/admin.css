@@ -1,0 +1,367 @@
+@charset "utf-8";
+
+/* -------------------------- common */
+
+*{margin: 0;padding: 0;}
+
+body{
+	 background-color: rgb(255, 255, 255);
+	 font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ',Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+	 font-size: 76%;
+	 line-height: 1.5em;
+	 color: rgb(51, 51, 51);
+	 text-align: center;
+	 margin-bottom: 20px;
+}
+html > body { font-size: 12px; }
+ul {list-style-type: none; }
+img{border:0;}
+
+/* -------------------------- link */
+
+a:link { color: rgb(0, 117, 169); text-decoration:none; }
+a:visited { color: rgb(0, 117, 169); text-decoration: underline; }
+a:hover { color: rgb(0, 117, 169); text-decoration: none; }
+a:active { color: rgb(0, 117, 169); text-decoration: none; }
+
+
+input:hover, a:hover img{
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+input:active, a:active img{
+	position: relative;
+	left: 1px;
+	top: 1px;
+}
+
+
+/* -------------------------- clear */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+/* for macIE \*/
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+.error {
+	color:red;
+}
+.kaishibtn {
+	color: white;
+	background-color: #1E90FF;
+	/*border-color: red;	*/
+}
+
+
+
+
+/* =============================================================================
+   layout
+   ========================================================================== */
+
+#layout {
+	text-align: left;
+	margin: 0px 50px;
+}
+#header {
+	font-size: 18px;
+	height:20px;
+}
+#main {
+	float: left;
+	margin:0px 0px 0px 10px;
+	width:85%;
+}
+#sidenavi{
+	width:14%;
+	float:left;
+}
+
+#footer{
+	padding:10px;
+}
+
+/* =============================================================================
+   login page
+   ========================================================================== */
+   
+#loginpage{
+	padding:50px;
+	width:500px;
+	margin:50px auto;
+	border-radius:0px 0px 5px 5px;
+	-moz-border-radius:0px 0px 5px 5px;
+	-webkit-border-radius:0px 0px 5px 5px;
+	box-shadow:1px 1px 3px #ccc;
+}
+#loginpage h1{
+ 	margin-bottom:30px;
+	font-size:20px;
+}
+#loginpage p{
+ 	margin-bottom:15px;
+}
+
+.txtbox{
+	height:25px;
+	width:300px;
+	font-size:14px;
+	line-height:2;
+	padding:2px;
+	border:1px solid #ccc;
+	border-radius:3px;
+	-moz-border-radius: 3px;
+	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ',Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+.btn01{
+	width:126px;
+	height:30px;
+	text-align:center;
+	font-weight:bold;
+	cursor:pointer;
+	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ',Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+.btn02{
+	width:80px;
+	height:30px;
+	text-align:center;
+	font-weight:bold;
+	cursor:pointer;
+	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ',Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+.btn02-u{
+	width:80px;
+	height:30px;
+	text-align:center;
+	font-weight:bold;
+	cursor:pointer;
+	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ',Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+.btn_area{
+	text-align:center;
+	padding:10px!important;
+}
+.btn_area01{
+	text-align:left;
+	padding:10px 10px 10px 200px;
+}
+.memo-t{
+	padding:5px;
+}
+select{
+	padding:3px;
+}
+
+
+/* =============================================================================
+   main
+   ========================================================================== */
+#main .cts {
+}
+
+#main h2 {
+	font-size: 18px;
+	padding: 11px;
+	border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	margin-bottom:10px;
+	text-align: left;
+	color:#fff;
+	background-color:#245DDB;
+	/* Firefox */
+	background: -moz-linear-gradient(top center, #5E88E4 0%, #245DDB 100%);
+	/* Chrom と Safari */
+	background: -webkit-gradient(linear, center top, center bottom, from(#5E88E4), to(#245DDB));
+	/* 共通 */
+	background: linear-gradient(top center, #5E88E4 0%, #245DDB 100%);
+}
+#main h3{
+	font-size:15px;
+	line-height:1;
+	color:#0066FF;
+	
+}
+#main p{
+ 	margin-bottom:10px;
+}
+
+#main .box {
+	padding: 1px;
+}
+
+#main dl{
+	padding:10px;
+	margin-bottom:15px;
+}
+#main dt{
+	background:#e4e4e4;
+	border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius:  5px 5px 0 0;
+	padding:5px;
+}
+#main dd{
+	border:1px solid #e4e4e4;
+	margin-bottom:15px;
+	padding:10px;
+}
+
+
+/* -------------------------- table */
+
+.tb01 {
+	margin-bottom: 0px;
+	width:100%;
+	border-collapse: separate;
+	font-size:14px;
+}
+.tb01 th {
+	background-color: rgb(236, 236, 236);
+	padding: 5px;
+	text-align: center;
+	width: 150px;
+}
+.tb01 td {
+	background-color: rgb(255, 255, 255);
+	padding: 5px;
+}
+.tb01 table th{
+	width:20%!important;
+	padding:5px!important;
+	background:#E7F1FB!important;
+}
+.in_tb01{
+	width:100%;
+}
+#in_tb01 th,
+#in_tb01 td{
+	border-bottom:1px dotted #ccc;
+}
+
+.tb02{
+	width:100%;
+	border-collapse: separate;
+	font-size:14px;
+	background:#ccc;
+}
+.tb02 th{
+	background-color: rgb(236, 236, 236);
+	padding: 5px;
+	text-align: center;
+}
+.tb02 td {
+	background-color: rgb(255, 255, 255);
+	padding: 5px;
+	vertical-align: top;
+}
+
+.tb02 td.status-0{
+	background-color:#FFFFFF;
+}
+.tb02 td.status-1{
+	background-color:#FF69B4;
+}
+
+
+/* -------------------------- form  */
+
+#main .cts textarea{
+	width:80%;
+	font-size:14px;
+	padding:2px;
+	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ',Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}	
+/*input text */
+#main .cts #keyword_meta,
+#main .cts #site_title,
+#main .cts #site_desc,
+#main .cts #tokutei_email,
+#main .cts #tokutei_add{
+	width:250px;
+	padding:2px;
+}
+
+
+
+
+
+.w95per {
+	width:95%;
+}
+.w80per {
+	width:80%;
+}
+.submitBtn {
+	width:24%;
+}
+.submenu {
+	background-color: #f1f1f1;
+	padding: 5px 10px;
+}
+.submenu a:link, a:visited {
+/*	padding-left: 10px;
+	margin-right: 10px;*/
+}
+
+
+
+
+
+/* =============================================================================
+   sidebar
+   ========================================================================== */
+.tit {
+	font-size: 14px;
+	color:#fff!important;
+	padding:10px 10px 10px 15px!important;
+	display: block;
+	background-color:#245DDB;
+	/* Firefox */
+	background: -moz-linear-gradient(top center, #5E88E4 0%, #245DDB 100%);
+	/* Chrom と Safari */
+	background: -webkit-gradient(linear, center top, center bottom, from(#5E88E4), to(#245DDB));
+	/* 共通 */
+	background: linear-gradient(top center, #5E88E4 0%, #245DDB 100%);
+	border: 1px solid #4776E1;
+	color: rgb(0, 0, 0);
+	border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+}
+#sidenavi ul{
+	margin-bottom:10px;
+	font-size:14px;
+	padding:0 0px;
+}
+#sidenavi ul li {
+	margin: 0px;
+	padding: 0px;
+}
+#sidenavi ul li a {
+	margin: 0px;
+	line-height:1.8;
+	padding: 5px 5px 5px 20px;
+	display: block;
+	border: 1px solid rgb(221, 221, 221);
+	border-top:none;
+	text-decoration:none;
+	background:url(images/icon01.gif) 8px center no-repeat;
+}
+#sidenavi ul li a:hover {
+	color:#FF0000;
+	background:url(images/icon02.gif) 8px center no-repeat;
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="content-script-Type" content="text/javascript" />
+<meta name="robots" content="noindex,nofollow">
+<title>{val admin/title}</title>
+<LINK rel="stylesheet" href="admin.css" type="text/css">
+</head>
+
+<body>
+<div id="loginpage">
+<h1>管理画面ログイン</h1>
+
+<div class="cts">
+<!--中身-->
+<!--{def message}-->
+<p><span class="error">{val message}</span></p>
+<!--{/def}-->
+
+<form name="form1" method="post" action="?act=login">
+<table width="100%" class="tb01">
+<tr>
+<th>ID</th>
+<td>
+<input type="text" name="id" value="" size="40" class="txtbox"></td>
+</tr>
+<tr>
+<th>パスワード</th>
+<td><input type="password" name="passwd" value="" size="40" class="txtbox"></td>
+</tr>
+<tr>
+<td colspan="2" class="btn_area">
+  <input type="submit" value="ログイン" class="btn01"></td>
+</tr>
+</table>
+</form>
+<!--中身-->
+</div>
+
+
+</div>
+
+<div id="foot">
+</div>
+
+</body>
+</html>

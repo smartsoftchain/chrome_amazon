@@ -1,0 +1,19 @@
+a:14:{s:7:"attribs";a:4:{s:5:"xmlns";s:36:"http://pear.php.net/dtd/rest.release";s:9:"xmlns:xsi";s:41:"http://www.w3.org/2001/XMLSchema-instance";s:11:"xmlns:xlink";s:28:"http://www.w3.org/1999/xlink";s:18:"xsi:schemaLocation";s:81:"http://pear.php.net/dtd/rest.release     http://pear.php.net/dtd/rest.release.xsd";}s:1:"p";a:2:{s:7:"attribs";a:1:{s:10:"xlink:href";s:23:"/rest/p/services_amazon";}s:8:"_content";s:15:"Services_Amazon";}s:1:"c";s:12:"pear.php.net";s:1:"v";s:5:"0.8.0";s:2:"st";s:4:"beta";s:1:"l";s:3:"BSD";s:1:"m";s:9:"ttsuruoka";s:1:"s";s:47:"PHP interface to Amazon Product Advertising API";s:1:"d";s:581:"Services_Amazon:
+* PHP interface to Amazon Product Advertising API
+* All APIs are supported: Lookup and Search for products, Wishlists, Marketplace, carts, customers, similar item and so on
+* Provide an associate tag
+* Multiple locale support: US, UK, DE, JP, FR and CA
+* Caching support
+     
+Services_AmazonECS4:
+* DEPRECATED: After August 15, 2009, all requests will be denied.
+* A class using Amazon Associates Web Service 4.0 (Amazon E-Commerce Service 4.0)
+* Provide associate links
+* Remote cart support
+* Multiple locale support: US, UK, DE, JP, FR and CA
+* Caching support";s:2:"da";s:19:"2009-05-10 11:50:54";s:1:"n";s:278:"Services_Amazon (Amazon.php):
+* Breaking backward compatibility
+* Product Advertising API support
+* New APIs: TagLookup, VehiclePartLookup, VehiclePartSearch, VehicleSearch
+Services_AmazonECS4 (AmazonECS4.php):
+* Fixed Bug #13556: Incorrect Operation value for TransactionLookup";s:1:"f";s:5:"20992";s:1:"g";s:45:"http://pear.php.net/get/Services_Amazon-0.8.0";s:1:"x";a:1:{s:7:"attribs";a:1:{s:10:"xlink:href";s:17:"package.0.8.0.xml";}}}
